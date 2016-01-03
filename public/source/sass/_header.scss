@@ -1,11 +1,21 @@
 header{
-    padding: em(20px);
+    padding: em(18px) em(18px) em(4px);
+    box-shadow: 0 0 5px 2px $Silver;
+    span, 
+    strong, 
+    a{
+        display: block;
+    }
+    a{
+        &:hover{
+            color: $Malibu
+        }
+    }
     .logo{
 
         margin:0;
         float: left;
         a{
-            display: block;
             text-indent: -9999px;
             background: url('../img/logo.png') 0 0 no-repeat;
             width: image-width('../img/logo.png');
@@ -14,14 +24,60 @@ header{
     }
     .user-area{
         float: right;
-        padding-left: 44px;
+        padding: 10px 0 10px 42px;
         background: url('../img/user-icon.png') 0 0 no-repeat;
         .welcome{
-            font-size: em(14px);
+            font-size: em(12px);
             min-width: 130px; 
-            .user-name{
-                display:block;
-                font-size:em(20px);
+        }
+        .user-name{
+            font-size:em(16px);
+        }
+        .user-details{
+            position: absolute;
+            top:86px;
+            right: 5px;
+            z-index: 2;
+            box-shadow: 0 0 5px 2px $Silver;
+            background: $White;
+            width: 350px;
+            padding: 22px 0 12px;
+            border-radius: 5px;
+            &:before{
+                border: solid;
+                border-color: $White transparent;
+                border-width: 0px 8px 14px 8px;
+                top: -14px;
+                content: "";
+                left: 89%;
+                position: absolute;
+                z-index: 2;
+            }
+            .user-img{
+                margin: 0 20px 10px;
+                float: left;
+            }
+            .last-access{
+                font-size: 15px;
+                color: $Nobel;
+                line-height: 34px;
+            }
+            .change-data,
+            .change-pass{
+                line-height: 25px;
+                font-size: 15px;
+
+            }
+            hr{
+                margin: 16px 0 10px 0;
+            }
+            .online-support{
+                float:left;
+                margin-left: 16px;
+            }
+            .logout{
+                float: right;
+                margin-right: 28px;
             }
         }
 
@@ -30,20 +86,7 @@ header{
 }
 
 @media (min-width: 768px){
-    header{
-        margin-bottom: 1.5em;
-
-        .brand{
-            font-size: em(38px);
-        }
-    }
-
 }
 
 @media (min-width: 1201px){
-    header{
-        .brand{
-            font-size: em(42px);
-        }
-    }
 }

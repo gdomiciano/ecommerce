@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header ng-controller="header">
+    <header ng-controller="header" class="clearfix"> 
         <h1 class="logo"><a href="#">Mercado Eletrônico</a></h1>
         <div class="user-area" ng-click="userBox()">
             <p class="welcome">Bem vindo, <strong class="user-name">João da Silva</strong></p>
             <i></i>
-            <div class="user-details hidden">
-                <img src="" alt="" class="user-img">
+            <div class="user-details hidden clearfix">
+                <img src="img/user-profile.jpg" alt="Imagem do Usuário" class="user-img">
                 <strong class="user-name">João da Silva</strong>
                 <span class="last-access">Último acesso 10/10/15 09:39</span>
                 <a href="#" class="change-data">Alterar Cadastro</a>
                 <a href="#" class="change-pass">Alterar Senha</a>
-                <h3></h3>
+                <hr></hr>
                 <a href="#" class="online-support"><i></i> Suporte Online</a>
                 <a href="#" class="logout"><i></i>Logout</a>
             </div>

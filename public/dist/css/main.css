@@ -1,6 +1,6 @@
 /* What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
 /* ========================================================================== Base styles: opinionated defaults ========================================================================== */
-html { color: #222; font-size: 1em; line-height: 1.4; }
+html { color: #58585a; font-size: 16px; line-height: 1.4; }
 
 /* Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301  These selection rule sets have to be separate. Customize the background color to match your design. */
 ::selection { background: #b3d4fc; text-shadow: none; }
@@ -21,6 +21,8 @@ textarea { resize: vertical; }
 .browserupgrade { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
 
 /* ========================================================================== Author's custom styles ========================================================================== */
+a, a:visited, a:hover, a:active { color: #58585a; text-decoration: none; }
+
 /* ========================================================================== Helper classes ========================================================================== */
 /* Hide visually and from screen readers */
 .hidden { display: none !important; }
@@ -2631,13 +2633,19 @@ button.close { -webkit-appearance: none; padding: 0; cursor: pointer; background
 /* Include this file in your html if you are using the CSP mode. */
 .ng-animate.item:not(.left):not(.right) { -webkit-transition: 0s ease-in-out left; transition: 0s ease-in-out left; }
 
-header { padding: 1.25em; }
+header { padding: 1.125em 1.125em 0.25em; box-shadow: 0 0 5px 2px #cccccc; }
+header span, header strong, header a { display: block; }
+header a:hover { color: #64B5F6; }
 header .logo { margin: 0; float: left; }
-header .logo a { display: block; text-indent: -9999px; background: url("../img/logo.png") 0 0 no-repeat; width: 182px; height: 50px; }
-header .user-area { float: right; padding-left: 44px; background: url("../img/user-icon.png") 0 0 no-repeat; }
-header .user-area .welcome { font-size: 0.875em; min-width: 130px; }
-header .user-area .welcome .user-name { display: block; font-size: 1.25em; }
-
-@media (min-width: 768px) { header { margin-bottom: 1.5em; }
-  header .brand { font-size: 2.375em; } }
-@media (min-width: 1201px) { header .brand { font-size: 2.625em; } }
+header .logo a { text-indent: -9999px; background: url("../img/logo.png") 0 0 no-repeat; width: 182px; height: 50px; }
+header .user-area { float: right; padding: 10px 0 10px 42px; background: url("../img/user-icon.png") 0 0 no-repeat; }
+header .user-area .welcome { font-size: 0.75em; min-width: 130px; }
+header .user-area .user-name { font-size: 1em; }
+header .user-area .user-details { position: absolute; top: 86px; right: 5px; z-index: 2; box-shadow: 0 0 5px 2px #cccccc; background: #ffffff; width: 350px; padding: 22px 0 12px; border-radius: 5px; }
+header .user-area .user-details:before { border: solid; border-color: #ffffff transparent; border-width: 0px 8px 14px 8px; top: -14px; content: ""; left: 89%; position: absolute; z-index: 2; }
+header .user-area .user-details .user-img { margin: 0 20px 10px; float: left; }
+header .user-area .user-details .last-access { font-size: 15px; color: #b6b6b6; line-height: 34px; }
+header .user-area .user-details .change-data, header .user-area .user-details .change-pass { line-height: 25px; font-size: 15px; }
+header .user-area .user-details hr { margin: 16px 0 10px 0; }
+header .user-area .user-details .online-support { float: left; margin-left: 16px; }
+header .user-area .user-details .logout { float: right; margin-right: 28px; }

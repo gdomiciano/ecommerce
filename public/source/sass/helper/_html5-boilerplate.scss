@@ -9,8 +9,8 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
+    color: $ScarpaFlow;
+    font-size: $fontSize;
     line-height: 1.4;
 }
 
@@ -90,7 +90,13 @@ textarea {
 
 
 
-
+a,
+a:visited,
+a:hover,
+a:active{
+    color: $ScarpaFlow;
+    text-decoration: none;
+}
 
 
 
