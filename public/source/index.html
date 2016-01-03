@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ecommerce">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado Eletrônico</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header ng-controller="header">
+        <h1 class="logo"><a href="#">Mercado Eletrônico</a></h1>
+        <div class="user-area" ng-click="userBox()">
+            <p class="welcome">Bem vindo, <strong class="user-name">João da Silva</strong></p>
+            <i></i>
+            <div class="user-details hidden">
+                <img src="" alt="" class="user-img">
+                <strong class="user-name">João da Silva</strong>
+                <span class="last-access">Último acesso 10/10/15 09:39</span>
+                <a href="#" class="change-data">Alterar Cadastro</a>
+                <a href="#" class="change-pass">Alterar Senha</a>
+                <h3></h3>
+                <a href="#" class="online-support"><i></i> Suporte Online</a>
+                <a href="#" class="logout"><i></i>Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul class="items-list">
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                    <li><i></i> Lorem Ipsum</li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="store-window">
+                <div class="banner">
+                    <div ng-controller="startCarousel">
+                        <div>
+                            <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                                <uib-slide ng-repeat="slide in slides" active="slide.active">
+                                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                                    <div class="carousel-caption">
+                                        <h4>Slide {{$index}}</h4>
+                                        <p>{{slide.text}}</p>
+                                    </div>
+                                </uib-slide>
+                            </uib-carousel>
+                        </div>
+                    </div>
+                </div>  
+                <div class="datepicker">
+                    <div ng-controller="UibDatepickerController">
+                        <div>
+                            <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="false" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>
+                        </div>
+                    </div>
+                </div>
+            <div class="products">
+                <div class="product-panel">
+                    <h3 class="product-code"></h3>
+                    <div class="product-img"><img src="" alt=""></div>
+                    <p class="product-description">desciption</p>
+                    <strong class="product-price"></strong>
+                    <button class="btn"><i></i> carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>  
+    
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/ui-bootstrap-custom.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

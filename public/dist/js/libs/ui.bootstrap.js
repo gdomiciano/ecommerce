@@ -1,0 +1,1 @@
+angular.module("ui.bootstrap").controller("CarouselDemoCtrl",function($scope){$scope.myInterval=5e3,$scope.noWrapSlides=!1;var slides=$scope.slides=[];$scope.addSlide=function(){600+slides.length+1;slides.push({image:"http://lorempixel.com/680/240/",text:"Campanha Copa 2014",description:"Status"})};for(var i=0;4>i;i++)$scope.addSlide()}).controller();
