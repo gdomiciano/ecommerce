@@ -1,5 +1,5 @@
 header{
-    padding: em(18px) em(18px) em(4px);
+    padding: 18px 18px 4px;
     box-shadow: 0 0 5px 2px $Silver;
     span, 
     strong, 
@@ -26,12 +26,13 @@ header{
         float: right;
         padding: 10px 0 10px 42px;
         background: url($imgPath + 'user-icon.png') 0 0 no-repeat;
+        cursor: pointer;
         .welcome{
-            font-size: em(12px);
+            font-size: 12px;
             min-width: 130px; 
         }
         .user-name{
-            font-size:em(16px);
+            font-size:16px;
         }
         .user-details{
             position: absolute;

@@ -1,0 +1,53 @@
+.datepicker{
+    float: left;
+    width: 276px;
+    height: 240px;
+    margin: 0;
+    .well{
+        background: $White;
+    }
+    table.uib-daypicker.ng-scope{
+        width: 100%;
+        .btn.btn-default{
+            border: none;
+            background: none;
+            padding: 10px 0 0;
+            line-height: 20px;
+            outline: none;
+        }
+        thead{
+            .btn{
+                &.uib-title{
+                    .ng-binding{
+                        font-size: 13px;
+                        font-weight: normal
+                    }
+                }
+            }
+            small.ng-binding{
+                padding-top: 12px;
+                display: inline-block;
+                font-size: 13px;
+            }
+        }
+        tbody{
+            .uib-day{
+                .btn{
+                    padding: 7px 0 0;
+                    span{
+                    
+                        font-weight: bold;
+                        font-size: 13px;
+                        color: $ScarpaFlow;
+                    }
+                    .text-muted{
+                        color: $Silver;
+                    }
+                    .text-info{
+                        color: $Red;
+                    }
+                }
+            }
+        }
+    }
+}

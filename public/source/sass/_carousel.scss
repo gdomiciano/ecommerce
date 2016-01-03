@@ -1,0 +1,41 @@
+.banner{
+    float: left;
+    width: 680px;
+    height: 240px;
+    margin-right:10px;
+    overflow: hidden;
+    .carousel{
+        .carousel-inner > .item > img, 
+        .carousel-inner > .item > a > img,
+        .carousel-control.left,
+        .carousel-control.right{
+            border-radius: 5px;
+        }
+        .carousel-indicators{
+            display: none;
+        }
+        .carousel-caption.ng-scope{
+            padding: 0px 16px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: left;
+            background: url($imgPath+'overlay.png') repeat;
+            border-radius: 0 0 5px 5px;
+            h2{
+                font-size: 20px;
+                margin: 0;
+                font-weight: bold;
+                line-height: 55px;
+            }
+            span{
+                font-weight: normal;
+                color: #eee;
+            }
+        }
+        a.right.carousel-control,
+        a.left.carousel-control{
+            color: $Gallery;
+        }
+    }
+}

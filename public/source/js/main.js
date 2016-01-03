@@ -1,11 +1,32 @@
 var app = angular.module('ecommerce', ['ui.bootstrap']);
-app.controller('window', function ($scope) {
+
+app.controller('ProductsCtrl', function ($scope) {
     'use strict';
 
-    $scope.products = [];
+    $scope.products = [
+        {
+            code: '#COD03021',
+            image: 'img/products/paper.jpg',
+            description: 'Papel Sulfite 75g Alcalino 210x297 A4 Chamex Office Ipaper',
+            price: 'R$ 15,90'
+        },
+        {
+            code: '#COD03022',
+            image: 'img/products/paper.jpg',
+            description: 'Papel Sulfite 75g Alcalino 210x297',
+            price: 'R$ 15,90'
+        },
+        {
+            code: '#COD03023',
+            image: 'img/products/paper.jpg',
+            description: 'Papel Sulfite 75g Alcalino 210x297 A4 Chamex Office Ipaper PT 500 Alcalino 210x297 A4 Chamex Office',
+            price: 'R$ 31,99'
+        }
+    ];
 
 });
-app.controller('startCarousel', function($scope){
+
+app.controller('CarouselCtrl', function ($scope){
     var slides = $scope.slides = [];
     $scope.addSlide = function() {
         var imgNumber = slides.length + 1;
@@ -15,13 +36,13 @@ app.controller('startCarousel', function($scope){
             description: 'Status'
         });
     };
-    for (var i=0; i < 6; i++) {
+    for (var i=0; i < 3; i++) {
         $scope.addSlide();
     };
     // console.log(slides);
 });
 
-app.controller('header', function($scope){
+app.controller('HeaderCtrl', function ($scope){
 
     $scope.userBox = function(){
         if($('.user-details').hasClass('hidden')){

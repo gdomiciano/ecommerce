@@ -1,26 +1,38 @@
 .container{
     width: 100%;
+    height: 100%;
     margin:0;
     padding: 0;
+    background: $Gallery;
+
     .sidebar{
         background: $DoveGray;
-        color: $White;
         padding: 0 16px;
         height: 100%;
-        float: left;
-        position: fixed;
+        position: absolute;
+        left: 0;
         z-index: 100;
+
+        a{
+            color: $White;
+            text-decoration: none;
+            outline: none;
+            &:hover{
+                color: $Malibu;
+            }
+        }
         
         .items-list{
             margin: 0;
             padding: 0;
             
-            li{
+            .item{
                 list-style: none;
                 line-height: 42px;
-                margin: 18px 0px;
+                margin: 18px 0px ;
                 span{   
-                    font-size: 16px;
+                    font-size: 13px;
+                    text-indent: 4px;
                     display: none;
                 }
                 i{
@@ -28,66 +40,109 @@
                     font-size: 32px;
                     display: inline-block;
                     margin: 0px auto;
+                    width: 38px;
                     text-align: center;
+                }
+            }
+        }
+        &:hover{
+            width:252px;
+            .items-list{
+
+                .item{ 
+                    margin-right: 20px;
+                    span{
+                        display: inline-block;
+                    }
                 }
             }
         }
 
     }
     .store-window{
-        min-width: 768px;
-        max-width: 998px;
-        margin: 0px auto;
-        .banner{
-            float: left;
-            width: 68%;
-            margin: 0 1%;
-            border-radius: 5px;
-            overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding-left: 80px;
+        .content{
+            width: 970px;
+            margin: 0px auto;
+            padding-top: 20px;
         }
-        .datepicker{
-            float: left;
-            width: 28%;
-            margin: 0 1px;
+
+        .products{
+            clear:both;
+            padding-top: 14px;
+            .product-panel.ng-scope{
+                background: $White;
+                display: inline-block;
+                width: 312px;
+                padding: 10px;
+                margin: 0 5px;
+                border-radius: 3px;
+                .product-code{
+                    margin: 0;
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 25px;
+                    text-indent: 2px;
+                    margin-bottom: 6px;
+
+                }
+                .product-img{
+                    width: 100%;
+                    height: 114px;
+                    border: 1px $Silver solid;
+                    margin-bottom: 14px;
+                    text-align: center;
+                }
+                .product-description{
+                    height: 52px;
+                    line-height: 16px;
+                    font-size: 13px;
+                    overflow: hidden;
+                }
+                .product-price{
+                    font-size: 29px;
+                    display: block;
+                    margin-bottom: 12px;
+                }
+                .btn{
+                    width: 100%;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: $White;
+                    font-weight: bold;
+                    font-size: 13px;
+                    background: $Malibu;
+                    .fa{
+                        font-size: 18px
+                    }
+
+                    &:hover{
+                        background: $Matisse;
+                    }
+                }
+            }
         }
+        
     }
 }
 
 @media (min-width: 1280px){
     .container{
         .sidebar{
-            background: $DoveGray;
-            color: $White;
-            padding: 0 16px;
-            height: 100%;
-            display:inline-block;
-            z-index: 100;
-            
+            width: 252px;
             .items-list{
-                margin: 0;
-                padding: 0;
-                
-                li{
-                    list-style: none;
-                    line-height: 42px;
-                    margin: 18px 0px;
+                .item{
+                    margin-right: 20px;
                     span{   
-                        font-size: 16px;
                         display: inline-block;
-                    }
-                    i{
-                        text-indent: 0;
-                        font-size: 32px;
-                        display: inline-block;
-                        margin: 0px auto;
-                        width: 38px;
-                        text-align: center;
                     }
                 }
             }
         }
         .store-window{
-            display: inline-block;
+            padding-left: 264px;
         }
     }
 }
