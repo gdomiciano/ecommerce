@@ -32,8 +32,12 @@ module.exports = function (grunt) {
                 tasks: ['copy:alljs', 'uglify:myjs']
             },
             img: {
-                files: '<%= path.htmlsrc %>**/*.{jpg,gif,png}',
+                files: '<%= path.imgsrc %>**/*.{jpg,gif,png}',
                 tasks: ['imagemin:allimg']
+            },
+            fonts: {
+                files: '<%= path.fontssrc %>**/*.{ttf,svg,woff,woof2,eot}',
+                tasks: ['copy:allfonts']
             }
         },
         //Clean Task

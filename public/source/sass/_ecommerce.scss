@@ -1,0 +1,17 @@
+.container{
+    width: 100%;
+    margin:0;
+    padding: 0;
+
+    .sidebar{
+        background: $DoveGray;
+        color: $White;
+        padding: 20px;
+        height: 100%;
+        float: left;
+        position: fixed;
+        z-index: 100;
+
+
+    }
+}

@@ -17,15 +17,15 @@ header{
         float: left;
         a{
             text-indent: -9999px;
-            background: url('../img/logo.png') 0 0 no-repeat;
-            width: image-width('../img/logo.png');
-            height: image-height('../img/logo.png');
+            background: url($imgPath + 'logo.png') 0 0 no-repeat;
+            width: image-width($imgPath + 'logo.png');
+            height: image-height($imgPath + 'logo.png');
         }
     }
     .user-area{
         float: right;
         padding: 10px 0 10px 42px;
-        background: url('../img/user-icon.png') 0 0 no-repeat;
+        background: url($imgPath + 'user-icon.png') 0 0 no-repeat;
         .welcome{
             font-size: em(12px);
             min-width: 130px; 
