@@ -2,16 +2,92 @@
     width: 100%;
     margin:0;
     padding: 0;
-
     .sidebar{
         background: $DoveGray;
         color: $White;
-        padding: 20px;
+        padding: 0 16px;
         height: 100%;
         float: left;
         position: fixed;
         z-index: 100;
+        
+        .items-list{
+            margin: 0;
+            padding: 0;
+            
+            li{
+                list-style: none;
+                line-height: 42px;
+                margin: 18px 0px;
+                span{   
+                    font-size: 16px;
+                    display: none;
+                }
+                i{
+                    text-indent: 0;
+                    font-size: 32px;
+                    display: inline-block;
+                    margin: 0px auto;
+                    text-align: center;
+                }
+            }
+        }
 
+    }
+    .store-window{
+        min-width: 768px;
+        max-width: 998px;
+        margin: 0px auto;
+        .banner{
+            float: left;
+            width: 68%;
+            margin: 0 1%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .datepicker{
+            float: left;
+            width: 28%;
+            margin: 0 1px;
+        }
+    }
+}
 
+@media (min-width: 1280px){
+    .container{
+        .sidebar{
+            background: $DoveGray;
+            color: $White;
+            padding: 0 16px;
+            height: 100%;
+            display:inline-block;
+            z-index: 100;
+            
+            .items-list{
+                margin: 0;
+                padding: 0;
+                
+                li{
+                    list-style: none;
+                    line-height: 42px;
+                    margin: 18px 0px;
+                    span{   
+                        font-size: 16px;
+                        display: inline-block;
+                    }
+                    i{
+                        text-indent: 0;
+                        font-size: 32px;
+                        display: inline-block;
+                        margin: 0px auto;
+                        width: 38px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .store-window{
+            display: inline-block;
+        }
     }
 }

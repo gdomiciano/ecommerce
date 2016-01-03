@@ -3894,4 +3894,18 @@ header .user-area .user-details .online-support { float: left; margin-left: 16px
 header .user-area .user-details .logout { float: right; margin-right: 28px; }
 
 .container { width: 100%; margin: 0; padding: 0; }
-.container .sidebar { background: #666666; color: #ffffff; padding: 20px; height: 100%; float: left; position: fixed; z-index: 100; }
+.container .sidebar { background: #666666; color: #ffffff; padding: 0 16px; height: 100%; float: left; position: fixed; z-index: 100; }
+.container .sidebar .items-list { margin: 0; padding: 0; }
+.container .sidebar .items-list li { list-style: none; line-height: 42px; margin: 18px 0px; }
+.container .sidebar .items-list li span { font-size: 16px; display: none; }
+.container .sidebar .items-list li i { text-indent: 0; font-size: 32px; display: inline-block; margin: 0px auto; text-align: center; }
+.container .store-window { min-width: 768px; max-width: 998px; margin: 0px auto; }
+.container .store-window .banner { float: left; width: 68%; margin: 0 1%; border-radius: 5px; overflow: hidden; }
+.container .store-window .datepicker { float: left; width: 28%; margin: 0 1px; }
+
+@media (min-width: 1280px) { .container .sidebar { background: #666666; color: #ffffff; padding: 0 16px; height: 100%; display: inline-block; z-index: 100; }
+  .container .sidebar .items-list { margin: 0; padding: 0; }
+  .container .sidebar .items-list li { list-style: none; line-height: 42px; margin: 18px 0px; }
+  .container .sidebar .items-list li span { font-size: 16px; display: inline-block; }
+  .container .sidebar .items-list li i { text-indent: 0; font-size: 32px; display: inline-block; margin: 0px auto; width: 38px; text-align: center; }
+  .container .store-window { display: inline-block; } }
