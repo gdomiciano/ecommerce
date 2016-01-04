@@ -34,5 +34,5 @@ Exemplo de Ecommerce
 ### Itens Adicionais ###
 
 * Esta aplicação está disponóvel apenas para Desktop;
-* O teste desta aplicação é recomendado no Google Chrome ou Mozila Firefox ;
-* Será masi facil configurar a aplicação se você estiver usando Linux OS ou Mac OS.
+* O teste desta aplicação é recomendado no Google Chrome ou Mozila Firefox;
+* Será mais fácil configurar a aplicação se você estiver usando Linux OS ou Mac OS.
